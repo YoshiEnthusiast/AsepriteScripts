@@ -12,7 +12,7 @@ dialog:number({ id = X_ENTRY_ID, label = X_ENTRY_ID, text = DEFAULT_COORDINATE }
 dialog:number({ id = Y_ENTRY_ID, label = Y_ENTRY_ID, text = DEFAULT_COORDINATE })
 dialog:number({ id = WIDTH_ENTRY_ID, label = WIDTH_ENTRY_ID })
 dialog:number({ id = HEIGHT_ENTRY_ID, label = HEIGHT_ENTRY_ID })
-dialog:number({ id = "maxFrames", label = "Max frames in one line" , text = "5"})
+dialog:number({ id = "max_frames", label = "Max frames in one line" , text = "5"})
 
 local DEFAULT_OUTPUT_SPRITE <const> = "Current"
 local DEFAULT_MODE <const> = "Duplicate current frame"
@@ -68,15 +68,15 @@ local function duplicate_image_on_sprite(sprite, image, frames_count, max_images
     end
 end
 
-local function put_frames_on_image(image, sourceSprite, frames_count, max_images_in_line, image_x, image_y, image_width, image_height)
+local function put_frames_on_image(image, source_sprite, frames_count, max_images_in_line, image_x, image_y, image_width, image_height)
     for i = 0, frames_count - 1 do
         local frame_index = i + 1
-        local frames = sourceSprite.frames
+        local frames = source_sprite.frames
         if frame_index > #frames then
             break
         end
-        local frame_image = Image(sourceSprite.width, sourceSprite.height)
-        frame_image:drawSprite(sourceSprite, frame_index)
+        local frame_image = Image(source_sprite.width, source_sprite.height)
+        frame_image:drawSprite(source_sprite, frame_index)
         local cropped_image = crop_image(frame_image, image_x, image_y, image_width, image_height)
         image:drawImage(cropped_image, get_image_point(i, max_images_in_line, image_width, image_height))
     end
@@ -129,7 +129,7 @@ local function create_sprite_map()
         return
     end
 
-    local max_frames_in_line = dialog.data.maxFrames
+    local max_frames_in_line = dialog.data.max_frames
     local map_width = math.min(frames_count, max_frames_in_line) * frame_width
     local map_height = math.ceil(frames_count / max_frames_in_line) * frame_height
 
