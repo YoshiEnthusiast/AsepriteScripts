@@ -4,4 +4,4 @@ Aseprite script that allows you to create sprite maps by connecting frames in yo
 I wish I had known that this feature already existed
 
 
-![Screenshot](Sprite map maker\Screenshot.png)
+![Screenshot](Sprite map maker/Screenshot.png)
