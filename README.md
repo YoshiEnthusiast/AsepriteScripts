@@ -5,6 +5,6 @@ Aseprite script that allows you to create sprite maps by connecting frames in yo
 ![Screenshot](SpriteMapMaker/Screenshot.png)
 
 # Amogusinator
-Hides amoguses in your sprite like people in r/place did
+Hides amoguses in your sprite like people in r/place did.
 
 ![Screenshot](Amogusinator/Screenshot.png)
