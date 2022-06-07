@@ -26,16 +26,14 @@ local function quad_tree(rectangle, depth)
 
     if tree.depth < MAX_QUAD_TREE_DEPTH then 
         local rectangle = tree.rectangle
-        local x = rectangle.x
-        local y = rectangle.y
         local half_width = rectangle.width
         local half_height = rectangle.height
-
         local width1 = math.floor(half_width)
         local width2 = math.ceil(half_width)
         local height1 = math.floor(half_height)
         local height2 = math.ceil(half_height)
-
+        local x = rectangle.x
+        local y = rectangle.y
         tree.children_rectangles = {
             Rectangle(x, y, width1, height1),
             Rectangle(x, y + height1, width1, height2),
