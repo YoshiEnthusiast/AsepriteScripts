@@ -1,5 +1,5 @@
 # Sprite map maker
-Allows you to create sprite maps by connecting frames in your animation(I wish I had known this feature already existed) or duplicating the current frame
+Allows you to create sprite maps by connecting frames in your animation (I wish I had known this feature already existed) or duplicating the current frame
 
 ![Screenshot](spriteMapMaker.png)
 
