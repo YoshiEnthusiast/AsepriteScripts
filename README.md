@@ -3,7 +3,7 @@ Allows you to create sprite maps by connecting frames in your animation(I wish I
 
 ![Screenshot](spriteMapMaker.png)
 
-# Amogusinator
+# Amogus Inator
 Hides Among Us characters in your sprite
 
 ![Screenshot](amogusInator.png)
